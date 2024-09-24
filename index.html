@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo poppins-extrabold">MYWEBSITE</div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section id="home">
+                <h2>Home</h2>
+                <p>Welcome to our website! We offer a range of services to meet your needs.</p>
+            </section>
+            <section id="services">
+                <h2>Services</h2>
+                <p>Explore the services we provide, tailored to help you achieve your goals.</p>
+            </section>
+            <section id="about">
+                <h2>About Us</h2>
+                <p>Learn more about our mission, vision, and the team behind our success.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any inquiries or support. We are here to help!</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 MYWEBSITE. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript fallback for smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        // JavaScript for hamburger menu
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav').classList.toggle('active');
+            document.querySelector('.hamburger').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
