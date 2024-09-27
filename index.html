@@ -128,5 +128,39 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQXTF8NK"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+        <script>
+            // Show modal with a smooth transition
+            document.getElementById("signInBtn").addEventListener("click", function() {
+                var modal = document.getElementById("signInModal");
+                modal.classList.add("show");
+            });
+        
+            // Close modal
+            document.getElementById("closeModal").addEventListener("click", function() {
+                var modal = document.getElementById("signInModal");
+                modal.classList.remove("show");
+            });
+        
+            // Handle form submission and show message
+            document.getElementById("signInForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+        
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+        
+                // Hide the form and show the thank you message with the user's details
+                document.getElementById("signInForm").style.display = "none";
+                document.getElementById("thanksMessage").style.display = "block";
+                document.getElementById("userEmail").innerText = email;
+        
+                // Optional: GA4 Event tracking
+                gtag('event', 'login', {
+                    method: 'manual_sign_in',
+                    email: email,
+                    event_category: 'Sign In',
+                    event_label: 'Sign In Successful'
+                });
+            });
+        </script>
     </body>
 </html>
