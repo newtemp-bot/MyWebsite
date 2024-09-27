@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
         <title>Home</title>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NQXTF8NK');</script>
+        <!-- End Google Tag Manager -->
     </head>
     <body>
         <header>
@@ -117,40 +124,9 @@
                         .classList.toggle("active");
                 });
         </script>
-        <script>
-            // Show modal with a smooth transition
-            document.getElementById("signInBtn").addEventListener("click", function() {
-                var modal = document.getElementById("signInModal");
-                modal.classList.add("show");
-            });
-        
-            // Close modal
-            document.getElementById("closeModal").addEventListener("click", function() {
-                var modal = document.getElementById("signInModal");
-                modal.classList.remove("show");
-            });
-        
-            // Handle form submission and show message
-            document.getElementById("signInForm").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent default form submission
-        
-                var email = document.getElementById("email").value;
-                var password = document.getElementById("password").value;
-        
-                // Hide the form and show the thank you message with the user's details
-                document.getElementById("signInForm").style.display = "none";
-                document.getElementById("thanksMessage").style.display = "block";
-                document.getElementById("userEmail").innerText = email;
-        
-                // Optional: GA4 Event tracking
-                gtag('event', 'login', {
-                    method: 'manual_sign_in',
-                    email: email,
-                    event_category: 'Sign In',
-                    event_label: 'Sign In Successful'
-                });
-            });
-        </script>
-        
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQXTF8NK"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
     </body>
 </html>
